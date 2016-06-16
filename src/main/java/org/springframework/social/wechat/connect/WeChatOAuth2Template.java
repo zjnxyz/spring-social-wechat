@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.social.oauth2.AccessGrant;
 import org.springframework.social.oauth2.OAuth2Template;
-import org.springframework.social.wechat.api.bean.WeixinAccessGrant;
+import org.springframework.social.wechat.api.bean.WeChatAccessGrant;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
@@ -32,15 +32,15 @@ public class WeChatOAuth2Template extends OAuth2Template {
 	}
 
 	@Override
-	protected WeixinAccessGrant createAccessGrant(String accessToken, String scope,
-			String refreshToken, Long expiresIn, Map<String, Object> response) {
+	protected WeChatAccessGrant createAccessGrant(String accessToken, String scope,
+												  String refreshToken, Long expiresIn, Map<String, Object> response) {
 		
 		logger.debug( response.toString() );
 		
 		if(response.containsKey("errcode")){
 			logger.error(response.toString());
 		}
-		WeixinAccessGrant g = new WeixinAccessGrant(accessToken, scope, refreshToken, expiresIn, 
+		WeChatAccessGrant g = new WeChatAccessGrant(accessToken, scope, refreshToken, expiresIn,
 				String.valueOf(response.get("openid")), 
 				String.valueOf(response.get("unionid")));
 		logger.debug( g.toString() );

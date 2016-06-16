@@ -22,24 +22,25 @@ import org.springframework.social.wechat.api.impl.WeChatTemplate;
 
 /**
  * WeChat ServiceProvider implementation.
+ *
  * @author liangping
  */
 public class WeChatServiceProvider<T> extends AbstractOAuth2ServiceProvider<WeChat> {
-	
-	public WeChatServiceProvider(OAuth2Operations oauth2Operations) {
-		super(oauth2Operations);
-	}
-	
-	public WeChatServiceProvider(String appid, String appsecret){
-		super(new WeChatOAuth2Template(appid, appsecret,
-				"https://open.weixin.qq.com/connect/qrconnect",
-				"https://api.weixin.qq.com/sns/oauth2/access_token"));
-	}
 
-	@Override
-	public WeChat getApi(String accesstoken) {
-		return new WeChatTemplate(accesstoken);
-	}
+    public WeChatServiceProvider(OAuth2Operations oauth2Operations) {
+        super(oauth2Operations);
+    }
+
+    public WeChatServiceProvider(String appId, String appSecret) {
+        super(new WeChatOAuth2Template(appId, appSecret,
+                "https://open.weixin.qq.com/connect/qrconnect",
+                "https://api.weixin.qq.com/sns/oauth2/access_token"));
+    }
+
+    @Override
+    public WeChat getApi(String accessToken) {
+        return new WeChatTemplate(accessToken);
+    }
 
 
 }

@@ -3,12 +3,12 @@ package org.springframework.social.wechat.api.bean;
 import java.io.Serializable;
 import java.util.Date;
 
-import org.springframework.social.wechat.api.WeixinObject;
+import org.springframework.social.wechat.api.WeChatObject;
 
 /**
  * The persistent class for the weixin_users database table. *
  */
-public class User extends WeixinObject implements Serializable {
+public class User extends WeChatObject implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String id;

@@ -25,8 +25,8 @@ import org.springframework.social.wechat.api.WeChat;
 public class WeChatConnectionFactory extends OAuth2ConnectionFactory<WeChat> {
 
 	
-	public WeChatConnectionFactory(String appid, String appsecret) {
-		super("weixin", new WeChatServiceProvider<WeChat>(appid, appsecret), new WeChatAdapter());
+	public WeChatConnectionFactory(String appId, String appSecret) {
+		super("wechat", new WeChatServiceProvider<WeChat>(appId, appSecret), new WeChatAdapter());
 	}
 	
 }

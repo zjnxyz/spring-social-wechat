@@ -3,10 +3,10 @@ package org.springframework.social.wechat.api;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class WeixinObject {
+public abstract class WeChatObject {
 	private Map<String, Object> extraData;
 
-	public WeixinObject() {
+	public WeChatObject() {
 		extraData = new HashMap<String, Object>();
 	}
 	public Map<String, Object> getExtraData() {

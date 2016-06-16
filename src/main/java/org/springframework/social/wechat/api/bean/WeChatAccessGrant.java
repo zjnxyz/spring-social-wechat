@@ -2,14 +2,14 @@ package org.springframework.social.wechat.api.bean;
 
 import org.springframework.social.oauth2.AccessGrant;
 
-public class WeixinAccessGrant extends AccessGrant {
+public class WeChatAccessGrant extends AccessGrant {
 
 	private static final long serialVersionUID = 5104132146580119202L;
 	private String openid;
 	private String unionid;
 	
-	public WeixinAccessGrant(String accessToken, String scope,
-			String refreshToken, Long expiresIn, String openid, String unionid) {
+	public WeChatAccessGrant(String accessToken, String scope,
+							 String refreshToken, Long expiresIn, String openid, String unionid) {
 		super(accessToken, scope, refreshToken, expiresIn);
 		this.openid  = openid;
 		this.unionid = unionid;
