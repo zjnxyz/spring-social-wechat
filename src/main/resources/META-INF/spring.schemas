@@ -1,0 +1,2 @@
+http\://www.springframework.org/schema/social/spring-social-weChat.xsd=org/springframework/social/weChat/config/xml/spring-social-weChat.xsd
+http\://www.springframework.org/schema/social/spring-social-weChat-1.0.xsd=org/springframework/social/weChat/config/xml/spring-social-weChat.xsd

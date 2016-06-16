@@ -1,0 +1,1 @@
+http\://www.springframework.org/schema/social/weChat=org.springframework.social.wechat.config.xml.WeChatNamespaceHandler
