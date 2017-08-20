@@ -2,6 +2,7 @@ package org.springframework.social.wechat.api;
 
 import org.springframework.social.ApiBinding;
 import org.springframework.social.wechat.api.bean.User;
+import org.springframework.social.wechat.api.bean.WeChatUserInfo;
 import org.springframework.social.wechat.api.operation.UserOperations;
 import org.springframework.web.client.RestOperations;
 
@@ -14,6 +15,6 @@ public interface WeChat extends ApiBinding {
 	RestOperations restOperations();
 	
 	UserOperations userOperations();
-	
-	User getWeixinUser(String openid);
+
+	WeChatUserInfo getWeixinUser(String openid);
 }

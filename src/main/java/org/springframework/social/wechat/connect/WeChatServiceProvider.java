@@ -19,6 +19,7 @@ import org.springframework.social.oauth2.AbstractOAuth2ServiceProvider;
 import org.springframework.social.oauth2.OAuth2Operations;
 import org.springframework.social.wechat.api.WeChat;
 import org.springframework.social.wechat.api.impl.WeChatTemplate;
+import org.springframework.social.wechat.constants.Const;
 
 /**
  * WeChat ServiceProvider implementation.
@@ -33,8 +34,8 @@ public class WeChatServiceProvider<T> extends AbstractOAuth2ServiceProvider<WeCh
 
     public WeChatServiceProvider(String appId, String appSecret) {
         super(new WeChatOAuth2Template(appId, appSecret,
-                "https://open.weixin.qq.com/connect/qrconnect",
-                "https://api.weixin.qq.com/sns/oauth2/access_token"));
+            Const.OPEN_WECHAT_DOMAIN+"/connect/qrconnect",
+                Const.API_WECHAT_DOMAIN+"/sns/oauth2/access_token"));
     }
 
     @Override
